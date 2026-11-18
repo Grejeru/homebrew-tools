@@ -18,6 +18,6 @@ class Ccstatusline < Formula
   end
 
   test do
-    assert_predicate bin/"ccstatusline", :exist?
+    assert_path_exists bin/"ccstatusline"
   end
 end

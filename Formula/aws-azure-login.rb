@@ -18,6 +18,6 @@ class AwsAzureLogin < Formula
   end
 
   test do
-    assert_predicate bin/"aws-azure-login", :exist?
+    assert_path_exists bin/"aws-azure-login"
   end
 end

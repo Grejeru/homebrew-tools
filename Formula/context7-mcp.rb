@@ -18,6 +18,6 @@ class Context7Mcp < Formula
   end
 
   test do
-    assert_predicate bin/"context7-mcp", :exist?
+    assert_path_exists bin/"context7-mcp"
   end
 end

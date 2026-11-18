@@ -18,6 +18,6 @@ class PlaywrightMcp < Formula
   end
 
   test do
-    assert_predicate bin/"playwright-mcp", :exist?
+    assert_path_exists bin/"playwright-mcp"
   end
 end

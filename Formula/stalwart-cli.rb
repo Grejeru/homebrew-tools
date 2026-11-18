@@ -1,19 +1,18 @@
 class StalwartCli < Formula
-  desc "Command line interface for the Stalwart mail server"
+  desc "Command-line interface for the Stalwart mail server"
   homepage "https://github.com/stalwartlabs/cli"
   url "https://github.com/stalwartlabs/cli/releases/download/v1.0.12/stalwart-cli-aarch64-apple-darwin.tar.xz"
-  version "1.0.12"
   sha256 "4c3e2fcbcde593814739426dad369a84eaa82140daf751245a25c2761a5224cf"
   license any_of: ["AGPL-3.0-only", :cannot_represent]
-
-  # Prebuilt arm64 macOS binary from upstream releases (cargo-dist).
-  depends_on arch: :arm64
-  depends_on :macos
 
   livecheck do
     url :homepage
     strategy :github_latest
   end
+
+  # Prebuilt arm64 macOS binary from upstream releases (cargo-dist).
+  depends_on arch: :arm64
+  depends_on :macos
 
   def install
     bin.install "stalwart-cli"
