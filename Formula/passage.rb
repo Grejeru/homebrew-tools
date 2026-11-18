@@ -20,6 +20,8 @@ class Passage < Formula
   end
 
   test do
+    (testpath/".passage").mkpath
+    system Formula["age"].opt_bin/"age-keygen", "-o", testpath/".passage/identities"
     assert_match "passage: age-backed password manager", shell_output("#{bin}/passage version")
   end
 end
