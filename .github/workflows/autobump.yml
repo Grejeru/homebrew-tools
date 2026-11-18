@@ -1,0 +1,25 @@
+name: autobump
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  bump:
+    runs-on: macos-latest
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@main
+      - name: Tap this repo
+        run: brew tap "$GITHUB_REPOSITORY" "https://github.com/$GITHUB_REPOSITORY"
+      - name: Open bump PRs
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          tap="$(echo "$GITHUB_REPOSITORY" | sed 's#homebrew-##')"
+          for f in $(brew tap-info --json "$tap" | jq -r '.[0].formula_names[]'); do
+            brew bump --no-fork --open-pr "$f" || true
+          done
