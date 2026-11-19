@@ -1,8 +1,8 @@
 class StalwartCli < Formula
   desc "Command-line interface for the Stalwart mail server"
   homepage "https://github.com/stalwartlabs/cli"
-  url "https://github.com/stalwartlabs/cli/releases/download/v1.0.12/stalwart-cli-aarch64-apple-darwin.tar.xz"
-  sha256 "4c3e2fcbcde593814739426dad369a84eaa82140daf751245a25c2761a5224cf"
+  url "https://github.com/stalwartlabs/cli/releases/download/v2.0.0/stalwart-cli-aarch64-apple-darwin.tar.xz"
+  sha256 "f190697e04460d5d4ce118d70f5b22341e543710468f3aa6e59fb3219a2923a3"
   license any_of: ["AGPL-3.0-only", :cannot_represent]
 
   livecheck do
