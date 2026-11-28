@@ -1,8 +1,8 @@
 class Context7Mcp < Formula
   desc "MCP server for Context7 documentation"
   homepage "https://github.com/upstash/context7"
-  url "https://registry.npmjs.org/@upstash/context7-mcp/-/context7-mcp-4.7.3.tgz"
-  sha256 "ffa998e5c835fc5eff2ae59770531340e4d7ed42be00740c52893097425548af"
+  url "https://registry.npmjs.org/@upstash/context7-mcp/-/context7-mcp-4.9.1.tgz"
+  sha256 "35b00e3a3b72628141f8e74325750063ce19b12339c2907a18ca77011c96ab61"
   license "MIT"
 
   livecheck do
